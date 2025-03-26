@@ -1,10 +1,9 @@
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { ContactFormConfig, ContactFormSchema } from "./contact-form-config";
 import { toast } from "sonner";
-import { sendMail } from "@/lib/smtp/send-email";
+import { z } from "zod";
+import { ContactFormConfig, ContactFormSchema } from "./contact-form-config";
 
 const useContactForm = () => {
   type FormValues = z.infer<typeof ContactFormSchema>;
