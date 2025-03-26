@@ -1,17 +1,15 @@
 "use client";
 
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
+import { Separator } from "@/components/ui/separator";
 import {
-  ArrowDownRightIcon,
   ArrowLeft,
   ArrowRight,
   ExternalLinkIcon,
-  GithubIcon,
+  GithubIcon
 } from "lucide-react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import useWorkSection from "./use-work-section";
-import { Badge } from "@/components/ui/badge";
-import { Separator } from "@/components/ui/separator";
 import {
   Section,
   SectionContent,
@@ -20,10 +18,11 @@ import {
   SectionSubtitle,
   SectionTopline,
 } from "../landing-section";
+import useWorkSection from "./use-work-section";
 
 const WorkSection = () => {
   const { project, handleNext, handlePrev } = useWorkSection();
-  const { num, title, description, img, tags, link, github } = project;
+  const { num, title, description, img, tags,  github } = project;
 
   return (
     <Section

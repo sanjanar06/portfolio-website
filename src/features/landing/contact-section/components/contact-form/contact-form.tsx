@@ -1,11 +1,11 @@
 "use client";
 
-import { Card, CardContent } from "@/components/ui/card";
-import useContactForm from "./use-contact-form";
 import FormInput from "@/components/form-input";
-import { ContactFormConfig } from "./contact-form-config";
 import { LoadingButton } from "@/components/loading-button";
+import { Card, CardContent } from "@/components/ui/card";
 import { Form } from "@/components/ui/form";
+import { ContactFormConfig } from "./contact-form-config";
+import useContactForm from "./use-contact-form";
 
 export const ContactForm = () => {
   const { form, onSubmit, isSubmitting } = useContactForm();

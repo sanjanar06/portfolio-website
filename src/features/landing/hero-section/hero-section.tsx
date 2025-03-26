@@ -1,8 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { DownloadIcon, GithubIcon, LinkedinIcon } from "lucide-react";
-import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 const HeroSection = () => {
   const links = [

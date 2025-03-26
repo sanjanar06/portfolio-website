@@ -28,8 +28,7 @@ const useContactForm = () => {
     console.log(values);
   
     try {
-      const fullName = `${values["firstname"]} ${values["lastname"]}`.trim();
-      const senderEmail = values["email"];
+     
       const emailSubject = encodeURIComponent(values["subject"]);
       const messageText = encodeURIComponent(`${values["message"]}`);
   
