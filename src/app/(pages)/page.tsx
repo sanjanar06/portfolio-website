@@ -1,10 +1,10 @@
+import MediumSection from "@/features/landing/blog-section/blog-section";
 import ContactSection from "@/features/landing/contact-section/contact-section";
 import HeroSection from "@/features/landing/hero-section/hero-section";
-import ResumeSection from "@/features/landing/resume-section/resume-section";
 import ServicesSection from "@/features/landing/services-section/services-section";
 import WorkSection from "@/features/landing/work-section/work-section";
 export const metadata = {
-  title: "Ganesh's Portfolio",
+  title: "Sanjana's Portfolio",
   
 }
 export default function Home() {
@@ -15,8 +15,8 @@ export default function Home() {
     >
       <HeroSection />
       <ServicesSection />
-      <ResumeSection />
       <WorkSection />
+      <MediumSection />
       <ContactSection />
     </main>
   );

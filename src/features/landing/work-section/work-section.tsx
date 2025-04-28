@@ -38,7 +38,7 @@ const WorkSection = () => {
       <SectionContent className="grid grid-cols-1 lg:grid-cols-2 gap-10">
         <div className="space-y-8">
           <div className="space-y-3">
-            <h1 className="text-6xl font-extrabold">{num}</h1>
+            <h1 className="text-5xl font-bold">{num}</h1>
             <h2>{title}</h2>
             <p className="text-sm">{description}</p>
           </div>
@@ -72,15 +72,16 @@ const WorkSection = () => {
             </a>
           </div>
         </div>
-        <div className="grid gap-3">
+        <div className="grid gap-3 h-full">
           <Image
             src={img}
             alt={title}
             height={500}
             width={500}
-            className="object-cover rounded-lg"
+            className="object-cover h-full"
           />
           <div className="flex space-x-3 self-start justify-self-end">
+            <span className="text-sm text-muted-foreground self-center">Swipe for more!</span>
             <Button size="icon" className="cursor-pointer" onClick={handlePrev}>
               <ArrowLeft />
             </Button>

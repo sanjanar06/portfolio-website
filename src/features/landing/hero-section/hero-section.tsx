@@ -6,12 +6,12 @@ const HeroSection = () => {
   const links = [
     {
       icon: <GithubIcon />,
-      path: "https://github.com/ganeshnaidudsa",
+      path: "https://github.com/sanjanar06",
     },
 
     {
       icon: <LinkedinIcon />,
-      path: "https://www.linkedin.com/in/ganesh-naidu-957111238/",
+      path: "https://www.linkedin.com/in/sanjana-reji-kallingal-431b07190/",
     },
   ];
 
@@ -31,13 +31,13 @@ const HeroSection = () => {
         <div className="flex flex-col xl:flex-row items-start gap-10">
           {/* Left Section: Introduction */}
           <div className="text-center xl:text-left order-2 xl:order-none space-y-6">
-            <span className="text-lg font-semibold leading-0.5">Full Stack Developer</span>
+            <span className="text-lg font-semibold leading-0.5">Software Developer</span>
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
               Hello, I am <br />
-              <span className="">Ganesh Naidu</span>
+              <span className="">Sanjana Reji</span>
             </h2>
             <p className="max-w-xl">
-              Recent Software Engineering Graduate with a strong foundation in technology and Full Stack Development.Eager to contribute to innovative projects in this ever- evolving field.{" "}
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.{" "}
             </p>
 
             <div className="flex flex-col xl:flex-row items-center justify-center xl:justify-start gap-4">
@@ -49,6 +49,17 @@ const HeroSection = () => {
                     href="https://drive.google.com/file/d/1_FdcoPa40gpKdAGia6ZHbnjpyfOY747z/view?usp=drive_link"
                   >
                     Resume
+                  </a>
+                  <DownloadIcon />
+                </div>
+              </Button>
+              <Button asChild>
+                <div className="flex items-center gap-3 px-6 py-3">
+                  <a
+                    target="_blank"
+                    href="https://drive.google.com/file/d/1_FdcoPa40gpKdAGia6ZHbnjpyfOY747z/view?usp=drive_link"
+                  >
+                    Cover Letter
                   </a>
                   <DownloadIcon />
                 </div>

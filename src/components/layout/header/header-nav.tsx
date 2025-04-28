@@ -8,10 +8,6 @@ const links = [
     anchor: "#services",
   },
   {
-    label: "resume",
-    anchor: "#resume",
-  },
-  {
     label: "work",
     anchor: "#work",
   },

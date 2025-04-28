@@ -1,10 +1,11 @@
 "use client";
 
-import React from "react";
-import HeaderNav from "./header-nav";
-import { Button } from "@/components/ui/button";
 import { ModeToggle } from "@/components/mode-toggle";
+import { Button } from "@/components/ui/button";
 import { useScrollToAnchor } from "@/hooks/use-scroll-to-anchor";
+import { CoffeeIcon } from "lucide-react";
+import HeaderNav from "./header-nav";
+
 
 const Header = () => {
   const scrollToAnchor = useScrollToAnchor();
@@ -22,7 +23,7 @@ const Header = () => {
         }
         className="cursor-pointer text-3xl"
       >
-        Ganesh.
+        SR.
       </h1>
 
       <div className="flex items-center gap-5">
@@ -36,7 +37,8 @@ const Header = () => {
             })
           }
         >
-          Hire me
+          Coffee Chat
+          <CoffeeIcon />
         </Button>
         <ModeToggle />
       </div>
