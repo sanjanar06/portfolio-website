@@ -5,7 +5,7 @@ import { ArrowDownRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Section, SectionContent, SectionHeader, SectionHeading, SectionTopline } from "../landing-section";
 
-interface Article {
+type Article = {
   pubDate: string;
   title: string;
   link: string;
@@ -22,7 +22,7 @@ const MediumArticlesSection = () => {
         const response = await axios.get(
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sanjanareji06"
         );
-        const fetchedArticles = response.data.items.map((item: any): Article => ({
+        const fetchedArticles = response.data.items.map((item: Article): Article => ({
           title: item.title,
           link: item.link,
           pubDate: new Date(item.pubDate).toLocaleDateString("en-US", {

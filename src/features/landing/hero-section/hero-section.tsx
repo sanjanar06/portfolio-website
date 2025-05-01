@@ -1,18 +1,18 @@
 import { Button } from "@/components/ui/button";
-import { DownloadIcon, GithubIcon, LinkedinIcon } from "lucide-react";
+import { DownloadIcon } from "lucide-react";
 
 const HeroSection = () => {
-  const links = [
-    {
-      icon: <GithubIcon />,
-      path: "https://github.com/sanjanar06",
-    },
+  // const links = [
+  //   {
+  //     icon: <GithubIcon />,
+  //     path: "https://github.com/sanjanar06",
+  //   },
 
-    {
-      icon: <LinkedinIcon />,
-      path: "https://www.linkedin.com/in/sanjana-reji-kallingal-431b07190/",
-    },
-  ];
+  //   {
+  //     icon: <LinkedinIcon />,
+  //     path: "https://www.linkedin.com/in/sanjana-reji-kallingal-431b07190/",
+  //   },
+  // ];
 
   return (
     <section
