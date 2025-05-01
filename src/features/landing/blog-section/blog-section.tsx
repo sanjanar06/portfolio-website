@@ -1,9 +1,12 @@
 "use client"
 
 import axios from "axios";
+import { ArrowDownRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Section, SectionContent, SectionHeader, SectionHeading, SectionTopline } from "../landing-section";
 
 interface Article {
+  pubDate: string;
   title: string;
   link: string;
   description: string;
@@ -19,11 +22,17 @@ const MediumArticlesSection = () => {
         const response = await axios.get(
           "https://api.rss2json.com/v1/api.json?rss_url=https://medium.com/feed/@sanjanareji06"
         );
-        const fetchedArticles = response.data.items.map((item: any) => ({
+        const fetchedArticles = response.data.items.map((item: any): Article => ({
           title: item.title,
           link: item.link,
+          pubDate: new Date(item.pubDate).toLocaleDateString("en-US", {
+            month: "short", // Three-letter month
+            day: "2-digit", // Two-digit day
+            year: "numeric", // Full year
+          }),
           description: item.description.replace(/<[^>]*>?/gm, ""), // Remove HTML tags
-        }));
+        }))
+        .sort((a : Article, b : Article) => new Date(b.pubDate).getTime() - new Date(a.pubDate).getTime());
         setArticles(fetchedArticles);
       } catch (error) {
         console.error("Error fetching Medium articles:", error);
@@ -36,32 +45,42 @@ const MediumArticlesSection = () => {
   }, []);
 
   return (
-    <section
-      id="medium-articles-section"
+    <Section
+      id="blog"
       className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0 "
     >
-      <h2 className="text-3xl font-bold text-center mb-8">
-        My Medium Articles
-      </h2>
+      <SectionHeader>
+        <SectionTopline variant="secondary">Blog</SectionTopline>
+        <SectionHeading>MEDIUM BLOG</SectionHeading>
+      </SectionHeader>
+      {/* <h2 className="text-3xl font-bold text-center mb-8">
+        MEDIUM BLOG
+      </h2> */}
       {loading ? (
         <p className="text-center">Loading articles...</p>
       ) : (
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <SectionContent className="grid grid-cols-1">
           {articles.map((article, index) => (
-            <a
-              key={index}
-              href={article.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="block p-4 border rounded-lg shadow hover:shadow-lg transition"
-            >
-              <h3 className="text-xl font-semibold mb-2">{article.title}</h3>
-            </a>
+            <div key={index} className="group space-y-5">
+              <div className="flex justify-between items-center">
+              <h2 className="text-xl font-semibold">{article.title}</h2>
+                <button
+                  onClick={() => window.open(article.link, "_blank")}
+                  className="bg-muted group-hover:bg-accent p-4 group-hover:-rotate-45 rounded-full transition-all duration-700"
+                >
+                  <ArrowDownRightIcon />
+                </button>
+              </div>
+              <p className="text-sm">{article.pubDate}</p>
+              
+              <div className="border-b" />
+            </div>
           ))}
-        </div>
+        </SectionContent>
       )}
-    </section>
+    </Section>
   );
 };
+
 
 export default MediumArticlesSection;

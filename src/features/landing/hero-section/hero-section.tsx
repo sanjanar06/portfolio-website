@@ -1,6 +1,5 @@
 import { Button } from "@/components/ui/button";
 import { DownloadIcon, GithubIcon, LinkedinIcon } from "lucide-react";
-import Link from "next/link";
 
 const HeroSection = () => {
   const links = [
@@ -48,24 +47,13 @@ const HeroSection = () => {
                     target="_blank"
                     href="https://drive.google.com/file/d/1_FdcoPa40gpKdAGia6ZHbnjpyfOY747z/view?usp=drive_link"
                   >
-                    Resume
-                  </a>
-                  <DownloadIcon />
-                </div>
-              </Button>
-              <Button asChild>
-                <div className="flex items-center gap-3 px-6 py-3">
-                  <a
-                    target="_blank"
-                    href="https://drive.google.com/file/d/1_FdcoPa40gpKdAGia6ZHbnjpyfOY747z/view?usp=drive_link"
-                  >
                     Cover Letter
                   </a>
                   <DownloadIcon />
                 </div>
               </Button>
 
-              {/* Social Links */}
+              {/* Social Links
               <div className="flex gap-5">
                 {links.map((link, index) => (
                   <Link legacyBehavior key={index} href={link.path} rel="noreferrer">
@@ -74,7 +62,7 @@ const HeroSection = () => {
                     </a>
                   </Link>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

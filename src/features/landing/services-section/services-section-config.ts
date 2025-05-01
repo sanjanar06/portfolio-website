@@ -11,6 +11,6 @@ export const servicesData = [
     title: "Backend Development",
     description: "Creating robust server-side logic and APIs.",
     href: "/services-section/backend",
-    image: "/images/backend.jpg", // Path to the image
+    image: "/projects/sketch-rooms.png", // Path to the image
   },
 ];

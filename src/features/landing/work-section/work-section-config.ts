@@ -15,7 +15,7 @@ export const projects = [
       { name: "Postgres", url: "https://www.postgresql.org/" }
     ],
     img: "/projects/sketch-landing.webp",
-    link: "#",
+    href: "/services-section/frontend",
     github: "https://github.com/ganeshnaidudsa/sketch",
   },
   {
@@ -34,7 +34,7 @@ export const projects = [
       { name: "Postgres", url: "https://www.postgresql.org/" }
     ],
     img: "/projects/sketch-canvas.png",
-    link: "#",
+    href: "#",
     github: "https://github.com/ganeshnaidudsa/sketch",
   },
   {
@@ -53,7 +53,7 @@ export const projects = [
       { name: "Postgres", url: "https://www.postgresql.org/" }
     ],
     img: "/projects/sketch-landing.webp",
-    link: "#",
+    href: "#",
     github: "https://github.com/ganeshnaidudsa/sketch",
   },
 ];
