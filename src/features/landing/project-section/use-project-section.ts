@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { projects } from "./work-section-config";
+import { projects } from "./project-section-config";
 
-const useWorkSection = () => {
+const useProjectSection = () => {
   const [activeIndex, setActiveIndex] = useState(0);
 
   // Get current project
@@ -22,4 +22,4 @@ const useWorkSection = () => {
     handlePrev,
   };
 };
-export default useWorkSection;
+export default useProjectSection;

@@ -25,9 +25,9 @@ const ContactSection = () => {
         </SectionSubtitle>
       </SectionHeader>
 
-      <SectionContent className="grid grid-cols-1 xl:grid-cols-2 gap-10">
+      <SectionContent className="grid grid-cols-1 xl:grid-cols-2 gap-5">
         {contactData.map((service, _) => (
-          <div key={_} className="group space-y-5">
+          <div key={_} className="group space-y-3">
             <div className="flex justify-between items-center">
               <h1 className="text-3xl font-extrabold">{service.title}</h1>
               <button

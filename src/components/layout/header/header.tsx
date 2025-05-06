@@ -17,13 +17,13 @@ const Header = () => {
     >
       <h1
         onClick={() =>
-          scrollToAnchor("#hero-section", {
+          scrollToAnchor("#about-section", {
             containerId: "landing-container",
           })
         }
         className="cursor-pointer text-3xl"
       >
-        SR.
+        Sanjana.
       </h1>
 
       <div className="flex items-center gap-5">
@@ -37,7 +37,7 @@ const Header = () => {
             })
           }
         >
-          Coffee Chat
+          Connect
           <CoffeeIcon />
         </Button>
         <ModeToggle />

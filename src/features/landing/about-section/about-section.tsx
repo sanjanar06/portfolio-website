@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { DownloadIcon } from "lucide-react";
 
-const HeroSection = () => {
+const AboutSection = () => {
   // const links = [
   //   {
   //     icon: <GithubIcon />,
@@ -16,7 +16,7 @@ const HeroSection = () => {
 
   return (
     <section
-      id="hero-section"
+      id="about-section"
       className="snap-start h-[calc(100vh-5rem)]  flex justify-center items-center mx-auto max-w-screen-lg px-4 xl:px-0 "
     >
       <div className="flex flex-wrap justify-center items-center gap-5">
@@ -71,4 +71,4 @@ const HeroSection = () => {
   );
 };
 
-export default HeroSection;
+export default AboutSection;

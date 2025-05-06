@@ -1,15 +1,5 @@
-"use client";
-
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import {
-  ArrowDownRightIcon,
-  ArrowLeft,
-  ArrowRight,
-  ExternalLinkIcon,
-  GithubIcon
-} from "lucide-react";
-import Image from "next/image";
+"use client"
+import { ArrowDownRightIcon } from "lucide-react";
 import { useState } from "react";
 import {
   Section,
@@ -19,80 +9,49 @@ import {
   SectionSubtitle,
   SectionTopline,
 } from "../landing-section";
-import FrontendSection from "../services-section/frontend"; // Import your frontend section component
-import useWorkSection from "./use-work-section";
+import FrontendSection from "./frontend"; // Import your frontend section component
+import { servicesData } from "./work-section-config";
 
-const WorkSection = () => {
-  const { project, handleNext, handlePrev } = useWorkSection();
-  const { num, title, description, img, tags, github, href } = project;
+const Services = () => {
   const [activeService, setActiveService] = useState<string | null>(null);
+
   const renderServiceContent = () => {
     switch (activeService) {
       case "/services-section/frontend":
         return <FrontendSection />;
       default:
         return (
-          <SectionContent className="grid grid-cols-1 lg:grid-cols-2 gap-10">
-            <div className="space-y-8">
-              <div className="space-y-3">
-                <h1 className="text-5xl font-bold">{num}</h1>
-                <h2 className="flex items-center gap-2">
-                  {title}
-                  <a
-                    href={github}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <GithubIcon className="h-5 w-5" />
-                    <span className="text-sm">GitHub</span>
-                  </a>
-
-                  <button
-                    className="btn"
-                    onClick={() => setActiveService(href)}
-                  >
-                    <ArrowDownRightIcon />
-                  </button>
-                </h2>
-                <p className="text-sm">{description}</p>
+          <SectionContent className="grid grid-cols-1 xl:grid-cols-2 gap-10">
+            {servicesData.map((service, _) => (
+              <div
+                key={_}
+                className="relative group space-y-5 overflow-hidden rounded-lg"
+              >
+                {/* Background Image */}
+                <img
+                  src={service.image} // Assuming `service.image` contains the image URL
+                  alt={service.title}
+                  className="absolute inset-0 w-full h-full object-cover"
+                />
+                {/* Overlay */}
+                <div className="absolute inset-0" />
+                {/* Content */}
+                <div className="relative z-10 p-6 text-black space-y-5">
+                  <div className="flex justify-between items-center">
+                    <h1 className="text-6xl font-extrabold">{service.num}</h1>
+                    <button
+                      onClick={() => setActiveService(service.href)}
+                      className="bg-muted group-hover:bg-accent p-4 group-hover:-rotate-45 rounded-full transition-all duration-700"
+                    >
+                      <ArrowDownRightIcon />
+                    </button>
+                  </div>
+                  <h2 className="text-2xl font-bold">{service.title}</h2>
+                  <p className="text-sm">{service.description}</p>
+                  <div className="border-b border-white" />
+                </div>
               </div>
-              <div className="flex gap-3 text-xs flex-wrap">
-                {tags.map((tag, index) => (
-                  <Badge key={index} variant="secondary">
-                    {tag.url ? (
-                      <a
-                        href={tag.url}
-                        rel="noopener noreferrer"
-                        className="flex gap-1"
-                      >
-                        <ExternalLinkIcon className="h-4 w-4" />
-                        <span>{tag.name}</span>
-                      </a>
-                    ) : (
-                      tag.name
-                    )}
-                  </Badge>
-                ))}
-              </div>
-              {/* <Separator /> */}
-            </div>
-            <div className="grid gap-3 h-full">
-              <Image
-                src={img}
-                alt={title}
-                height={500}
-                width={500}
-                className="object-cover h-full w-full"
-              />
-              <div className="flex space-x-3 self-start justify-self-end">
-                <span className="text-sm text-muted-foreground self-center">Swipe for more!</span>
-                <Button size="icon" className="cursor-pointer" onClick={handlePrev}>
-                  <ArrowLeft />
-                </Button>
-                <Button size="icon" className="cursor-pointer" onClick={handleNext}>
-                  <ArrowRight />
-                </Button>
-              </div>
-            </div>
+            ))}
           </SectionContent>
         );
     }
@@ -101,13 +60,14 @@ const WorkSection = () => {
   return (
     <Section
       id="work"
-      className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0 "
+      className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0"
     >
       <SectionHeader>
-        <SectionTopline variant="secondary">Tinker</SectionTopline>
-        <SectionHeading>PROJECTS</SectionHeading>
-        <SectionSubtitle>Lorem ipsum</SectionSubtitle>
+        <SectionTopline variant="secondary">WORK</SectionTopline>
+        <SectionHeading>WORK EXPERIENCE</SectionHeading>
+        <SectionSubtitle>Recent work</SectionSubtitle>
       </SectionHeader>
+
       {activeService ? (
         <button
           onClick={() => setActiveService(null)} // Back button to return to the services list
@@ -116,9 +76,10 @@ const WorkSection = () => {
           ← Back to Services
         </button>
       ) : null}
+
       {renderServiceContent()}
     </Section>
   );
 };
 
-export default WorkSection;
+export default Services;

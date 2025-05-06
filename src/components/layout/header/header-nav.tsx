@@ -4,12 +4,12 @@ import { useScrollToAnchor } from "@/hooks/use-scroll-to-anchor";
 
 const links = [
   {
-    label: "services",
-    anchor: "#services",
-  },
-  {
     label: "work",
     anchor: "#work",
+  },
+  {
+    label: "projects",
+    anchor: "#project",
   },
 ];
 
