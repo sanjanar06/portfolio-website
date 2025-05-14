@@ -57,7 +57,7 @@ const WellsFargoInternExp = () => {
         </ol>
 
         <p className="mt-3">To keep everything running smoothly, I set up discord channels, organized weekly syncs, and used the kanban board and github project board to ensure everyone stayed aligned. The process of collaborating with different sub-teams helped maintain clarity and ensured no one was left behind, especially as things got more complex.
-          Here's where things got even more interesting: during COVID, I had limited access to internal systems, which meant I had to build a standalone analytics platform from scratch. This turned out to be a blessing because it gave me autonomy and a deeper understanding of working in a remote-first environment. It was a perfect opportunity to step up and take ownership while learning to balance collaboration and independent work.
+          Here&apos;s where things got even more interesting: during COVID, I had limited access to internal systems, which meant I had to build a standalone analytics platform from scratch. This turned out to be a blessing because it gave me autonomy and a deeper understanding of working in a remote-first environment. It was a perfect opportunity to step up and take ownership while learning to balance collaboration and independent work.
         </p>
       </div>
     </section>

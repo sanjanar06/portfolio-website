@@ -25,7 +25,7 @@ const WellsFargoExp = () => {
 
       <div className="text-justify bg-accent font-sans p-4 font-thin rounded-2xl">
         <p className=" text-white mb-4">
-          Migrating from a monolithic architecture to microservices wasn't just a code rewrite — it was a full-scale system redesign. The stakes were high: a critical, high-traffic platform, limited team capacity, and aggressive timelines meant I was involved at every stage of the transformation.
+          Migrating from a monolithic architecture to microservices wasn&apos;t just a code rewrite — it was a full-scale system redesign. The stakes were high: a critical, high-traffic platform, limited team capacity, and aggressive timelines meant I was involved at every stage of the transformation.
         </p>
 
         <p className="text-xl font-bold mb-1">Discovery and Decomposition</p>
@@ -50,11 +50,11 @@ const WellsFargoExp = () => {
 
         <p className="text-xl font-bold mb-1">Documentation</p>
         <p className="text-white">
-          One of the first things I quickly realized in a corporate environment is that documentation isn't just helpful — it's absolutely essential to get any work done. A lot of the work relies on insider knowledge that's specific to the enterprise or application, and without that context, even basic tasks can become blockers.
+          One of the first things I quickly realized in a corporate environment is that documentation isn&apos;t just helpful — it&apos;s absolutely essential to get any work done. A lot of the work relies on insider knowledge that&apos;s specific to the enterprise or application, and without that context, even basic tasks can become blockers.
 
           Given that we were often working under tight deadlines, I made it a priority to document every new process, feature, or pipeline I was involved with. Whether it was onboarding a new component, managing a release, or setting up a proxy, I ensured that the steps were clearly written down in a centralized place for the team to refer to.
 
-          This habit proved incredibly valuable, especially during KT sessions and onboarding. It also helped when internal consumer teams reached out — instead of repeatedly explaining the API scope or integration steps, I could point them to well-maintained documentation that answered most of their questions. It became a key part of how I contributed to the team's velocity and reduced dependencies during development and release cycles.
+          This habit proved incredibly valuable, especially during KT sessions and onboarding. It also helped when internal consumer teams reached out — instead of repeatedly explaining the API scope or integration steps, I could point them to well-maintained documentation that answered most of their questions. It became a key part of how I contributed to the team&apos;s velocity and reduced dependencies during development and release cycles.
         </p>
       </div>
 
