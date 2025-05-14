@@ -19,7 +19,7 @@ import {
   SectionSubtitle,
   SectionTopline,
 } from "../landing-section";
-import FrontendSection from "../work-section/frontend"; // Import your frontend section component
+import FrontendSection from "../work-section/experience-section/wellsFargo"; // Import your frontend section component
 import useWorkSection from "./use-project-section";
 
 const WorkSection = () => {
@@ -104,7 +104,7 @@ const WorkSection = () => {
       className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0 "
     >
       <SectionHeader>
-        <SectionTopline variant="secondary">Tinker</SectionTopline>
+        <SectionTopline variant="secondary">PROJECTS</SectionTopline>
         <SectionHeading>PROJECTS</SectionHeading>
         <SectionSubtitle>Lorem ipsum</SectionSubtitle>
       </SectionHeader>
