@@ -21,34 +21,41 @@ const Services = () => {
         return <FrontendSection />;
       default:
         return (
-          <SectionContent className="grid grid-cols-1 xl:grid-cols-2 gap-10">
+          <SectionContent className="grid grid-cols-1 xl:grid-cols-2 gap-4">
             {servicesData.map((service, _) => (
               <div
                 key={_}
-                className="relative group space-y-5 overflow-hidden rounded-lg"
+                className="relative group space-y-5 overflow-hidden rounded-xl bg-[#e0dcd3] dark:bg-[#ebe8e1]"
               >
-                {/* Background Image */}
-                <img
-                  src={service.image} // Assuming `service.image` contains the image URL
-                  alt={service.title}
-                  className="absolute inset-0 w-full h-full object-cover"
-                />
                 {/* Overlay */}
                 <div className="absolute inset-0" />
                 {/* Content */}
-                <div className="relative z-10 p-6 text-black space-y-5">
-                  <div className="flex justify-between items-center">
-                    <h1 className="text-6xl font-extrabold">{service.num}</h1>
+                {/* Content */}
+                <div className="relative z-10 p-6 text-black space-y-4">
+                  {/* Arrow Icon at the Top-Right */}
+                  <div className="absolute top-4 right-4">
                     <button
                       onClick={() => setActiveService(service.href)}
-                      className="bg-muted group-hover:bg-accent p-4 group-hover:-rotate-45 rounded-full transition-all duration-700"
+                      className="p-2 group-hover:-rotate-45 rounded-full transition-all duration-700"
                     >
                       <ArrowDownRightIcon />
                     </button>
                   </div>
-                  <h2 className="text-2xl font-bold">{service.title}</h2>
-                  <p className="text-sm">{service.description}</p>
-                  <div className="border-b border-white" />
+
+                  {/* Company Logo */}
+                  <div className="flex justify-center">
+                    <img
+                      src={service.logo} // Assuming `service.logo` contains the logo URL
+                      alt={`${service.title} logo`}
+                      className="w-16 h-16 object-contain" // Fixed size for the logo
+                    />
+                  </div>
+
+                  {/* Company Name, Role, and Date */}
+                  <div >
+                    <h2 className="text-sm">{service.title}</h2>
+                    <p className="text-xs">{service.date}</p>
+                  </div>
                 </div>
               </div>
             ))}
