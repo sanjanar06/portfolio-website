@@ -15,7 +15,7 @@ const AboutSection = () => {
             <span className="">Sanjana Reji...</span>
           </h2>
           <p className="max-w-xl">
-            A software engineer with over two years of industry experience, currently pursuing my Master's in Computer Sciences at University of Wisconsin Madison. My interests lie at the intersection of system design, scalable architectures, and the stories behind how real-world tech systems evolve — I could talk about engineering case studies for hours. Outside of the code editor, you'll usually find me on a hiking trail or deep in a long-form tech article. I enjoy building thoughtful systems — and conversations.
+            A software engineer with over two years of industry experience, currently pursuing my Master&apos;s in Computer Sciences at University of Wisconsin Madison. My interests lie at the intersection of system design, scalable architectures, and the stories behind how real-world tech systems evolve — I could talk about engineering case studies for hours. Outside of the code editor, you&apos;ll usually find me on a hiking trail or deep in a long-form tech article. I enjoy building thoughtful systems — and conversations.
           </p>
 
           {/* Download Resume Button */}
