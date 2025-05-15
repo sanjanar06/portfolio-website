@@ -23,18 +23,18 @@ const WellsFargoExp = () => {
         <span className="bg-gray-800 text-white px-3 py-1 rounded-full text-sm">Splunk</span>
       </div>
 
-      <div className="text-justify bg-accent font-sans p-4 font-thin rounded-2xl">
-        <p className=" text-white mb-4">
+      <div className="text-justify text-black dark:text-white bg-accent font-sans p-4 dark:font-thin rounded-2xl">
+        <p className="mb-4">
           Migrating from a monolithic architecture to microservices wasn&apos;t just a code rewrite — it was a full-scale system redesign. The stakes were high: a critical, high-traffic platform, limited team capacity, and aggressive timelines meant I was involved at every stage of the transformation.
         </p>
 
         <p className="text-xl font-bold mb-1">Discovery and Decomposition</p>
-        <p className="text-white mb-4">
+        <p className="mb-4">
           We began by analyzing the usage of a legacy bulk API that was serving a wide range of downstream consumers. Through close collaboration with stakeholders, we identified the exact fields being used and the different use cases being served. This allowed us to break down the bulk API into multiple microservices — each focused on a specific responsibility — following the principle of separation of concerns. This not only made the architecture cleaner but also improved maintainability and performance.
         </p>
 
         <p className="text-xl font-bold mb-1">Optimization for Scale and Event-Driven Design</p>
-        <p className="text-white mb-4">
+        <p className="mb-4">
           The system processes over two billion API calls annually, so performance and scalability were major concerns. To minimize the load on downstream systems, we introduced Redis caching, significantly reducing latency and cutting down unnecessary external calls. We also transitioned to an event-driven model using Kafka. This enabled asynchronous processing and parallel execution of downstream tasks like customer notifications, without blocking the main API response. These architectural decisions helped ensure the system could scale efficiently under heavy load.
         </p>
 
@@ -44,12 +44,12 @@ const WellsFargoExp = () => {
       </p> */}
 
         <p className="text-xl font-bold mb-1">Proxy Integration</p>
-        <p className="text-white mb-4">
+        <p className=" mb-4">
           Authentication and authorization were abstracted through a centralized proxy layer. This layer enforced access controls, managed rate limiting, and ensured sensitive data was properly masked, aligning with PCI compliance requirements. We worked closely with the platform security team to ensure consistent identity propagation and secure service-to-service communication across the microservices.
         </p>
 
         <p className="text-xl font-bold mb-1">Documentation</p>
-        <p className="text-white">
+        <p >
           One of the first things I quickly realized in a corporate environment is that documentation isn&apos;t just helpful — it&apos;s absolutely essential to get any work done. A lot of the work relies on insider knowledge that&apos;s specific to the enterprise or application, and without that context, even basic tasks can become blockers.
 
           Given that we were often working under tight deadlines, I made it a priority to document every new process, feature, or pipeline I was involved with. Whether it was onboarding a new component, managing a release, or setting up a proxy, I ensured that the steps were clearly written down in a centralized place for the team to refer to.

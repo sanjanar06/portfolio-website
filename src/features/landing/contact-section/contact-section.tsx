@@ -13,7 +13,7 @@ const ContactSection = () => {
   return (
     <Section id="contact" className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0">
       <SectionHeader>
-        <SectionTopline variant="secondary">Contact</SectionTopline>
+        <SectionTopline variant="secondary" className="text-xl">Contact</SectionTopline>
         <div className="flex items-center justify-left">
           <div>
             <SectionHeading>FIND ME ONLINE</SectionHeading>
@@ -29,14 +29,16 @@ const ContactSection = () => {
         {contactData.map((service, _) => (
           <div key={_} className="group space-y-3">
             <div className="flex justify-between items-center">
-              <h1 className="text-3xl font-extrabold">{service.title}</h1>
-              <button
+              <h1 className="text-2xl font-bold">{service.title}</h1>
+                <a
+                href={service.url}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-muted group-hover:bg-accent p-4 group-hover:-rotate-45 rounded-full transition-all duration-700"
-              >
+                >
                 <ArrowDownRightIcon />
-              </button>
+                </a>
             </div>
-            <h2>{service.title}</h2>
             <p className="text-sm">{service.description}</p>
             <div className="border-b" />
           </div>

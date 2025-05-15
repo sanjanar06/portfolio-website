@@ -6,8 +6,7 @@ import {
   ArrowDownRightIcon,
   ArrowLeft,
   ArrowRight,
-  ExternalLinkIcon,
-  GithubIcon
+  ExternalLinkIcon
 } from "lucide-react";
 import Image from "next/image";
 import { useState } from "react";
@@ -15,44 +14,38 @@ import {
   Section,
   SectionContent,
   SectionHeader,
-  SectionHeading,
   SectionSubtitle,
-  SectionTopline,
+  SectionTopline
 } from "../landing-section";
-import FrontendSection from "../work-section/experience-section/wellsFargo"; // Import your frontend section component
+import CodeForGood from "./projects/codeForGood"; // Import your frontend section component
+import DeepFake from "./projects/deepfake"; // Import your frontend section component
 import useWorkSection from "./use-project-section";
 
 const WorkSection = () => {
   const { project, handleNext, handlePrev } = useWorkSection();
-  const { num, title, description, img, tags, github, href } = project;
+  const { title, description, img, tags, href } = project;
   const [activeService, setActiveService] = useState<string | null>(null);
   const renderServiceContent = () => {
     switch (activeService) {
-      case "/services-section/frontend":
-        return <FrontendSection />;
+      case "/projects/deepfake":
+        return <DeepFake />;
+      case "/projects/cfg":
+        return <CodeForGood />;
       default:
         return (
           <SectionContent className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <div className="space-y-8">
               <div className="space-y-3">
-                <h1 className="text-5xl font-bold">{num}</h1>
-                <h2 className="flex items-center gap-2">
-                  {title}
-                  <a
-                    href={github}
-                    className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors"
-                  >
-                    <GithubIcon className="h-5 w-5" />
-                    <span className="text-sm">GitHub</span>
-                  </a>
+                <div className="group flex items-center gap-2 justify-between">
+                  <h1 className="text-2xl font-bold">{title}</h1>
 
                   <button
-                    className="btn"
+                    className="btn group-hover:-rotate-45 transition-all duration-700"
                     onClick={() => setActiveService(href)}
                   >
                     <ArrowDownRightIcon />
                   </button>
-                </h2>
+                </div>
                 <p className="text-sm">{description}</p>
               </div>
               <div className="flex gap-3 text-xs flex-wrap">
@@ -62,6 +55,7 @@ const WorkSection = () => {
                       <a
                         href={tag.url}
                         rel="noopener noreferrer"
+                        target="_blank"
                         className="flex gap-1"
                       >
                         <ExternalLinkIcon className="h-4 w-4" />
@@ -73,7 +67,7 @@ const WorkSection = () => {
                   </Badge>
                 ))}
               </div>
-              {/* <Separator /> */}
+
             </div>
             <div className="grid gap-3 h-full">
               <Image
@@ -104,16 +98,15 @@ const WorkSection = () => {
       className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0 "
     >
       <SectionHeader>
-        <SectionTopline variant="secondary">PROJECTS</SectionTopline>
-        <SectionHeading>PROJECTS</SectionHeading>
-        <SectionSubtitle>Lorem ipsum</SectionSubtitle>
+        <SectionTopline variant="secondary" className="text-xl">PROJECTS</SectionTopline>
+        <SectionSubtitle>Sometimes I work on projects not scoped,sprinted or story pointed haha</SectionSubtitle>
       </SectionHeader>
       {activeService ? (
         <button
           onClick={() => setActiveService(null)} // Back button to return to the services list
           className="mb-4 text-blue-500 hover:underline text-lg"
         >
-          ← Back to Services
+          ← MORE
         </button>
       ) : null}
       {renderServiceContent()}

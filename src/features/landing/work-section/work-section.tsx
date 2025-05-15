@@ -72,7 +72,7 @@ const Services = () => {
       className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0"
     >
       <SectionHeader>
-        <SectionTopline variant="secondary">WORK EXPERIENCE</SectionTopline>
+        <SectionTopline variant="secondary" className="text-xl">WORK EXPERIENCE</SectionTopline>
         <SectionSubtitle>All the Cool Stuff I Built, Broke, and Eventually Mastered</SectionSubtitle>
       </SectionHeader>
 

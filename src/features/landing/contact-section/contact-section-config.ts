@@ -1,26 +1,26 @@
 export const contactData = [
     {
-      title: "Linked In",
-      description: "Building responsive and interactive user interfaces.",
-      href: "/services-section/frontend",
+      title: "LinkedIn",
+      description: "A software engineer without LinkedIn? Impossible. Drop a message on the chat!",
+      url: "https://www.linkedin.com/in/sanjana-reji-kallingal-431b07190/",
       image: "/projects/sketch-landing.webp", // Path to the image
     },
     {
-      title: "Github",
-      description: "Creating robust server-side logic and APIs.",
-      href: "/services-section/backend",
+      title: "GitHub",
+      description: "Don't check out the green boxes—read through my repositories instead.",
+      url: "https://github.com/sanjanar06",
       image: "/projects/sketch-rooms.png", // Path to the image
     },
     {
-      title: "Leetcode",
-      description: "Creating robust server-side logic and APIs.",
-      href: "/services-section/backend",
+      title: "LeetCode",
+      description: "I \"definitely\" don't do LeetCode just for the DSA rounds. Haha.",
+      url: "https://leetcode.com/u/sanjana_r06/",
       image: "/projects/sketch-rooms.png", // Path to the image
     },
     {
       title: "Medium",
-      description: "Creating robust server-side logic and APIs.",
-      href: "/services-section/backend",
+      description: "Where I share what I’ve learned, what I’m working on, and my experiences.",
+      url: "https://medium.com/@sanjanareji06",
       image: "/projects/sketch-rooms.png", // Path to the image
     },
-  ];
+];

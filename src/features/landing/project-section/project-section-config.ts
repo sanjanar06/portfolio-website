@@ -1,59 +1,25 @@
 export const projects = [
   {
-    num: "01",
-    category: "Collabration Tool",
-    title: "Sketch",
+    title: "DeepFake Detection Based on Phoneme-Viseme Mismatch",
     description:
-      "The Sketch Application is a collaborative drawing platform where multiple users can join a room and draw together in real-time. It is designed to foster creativity and teamwork, allowing users to express their ideas visually.",
+      "Designed and implemented a novel-pipeline to discern if a given video of a subject talking is real or fake by calculating the percentage of phoneme-viseme mismatch.",
     tags: [
-      { name: "Next.js", url: "https://nextjs.org/docs" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
-      { name: "WebSockets", url: "https://www.npmjs.com/package/websocket" },
-      { name: "Turbo Repo", url: "https://turbo.build/" },
-      { name: "Express Js", url: "https://expressjs.com/" },
-      { name: "Postgres", url: "https://www.postgresql.org/" }
+      { name: "Github", url: "https://github.com/rameeznaufal/deepfake-detection" },
+      { name: "Medium", url: "https://medium.com/@sanjanareji06" },
+      { name: "Kaggle", url: "https://www.kaggle.com/datasets/reubensuju/celeb-df-v2/data" },
+      { name: "Report", url: "https://drive.google.com/file/d/1gtegDZRVy76hzHjjUSTo2kLeXs-rQXIp/view?" }
     ],
-    img: "/projects/sketch-landing.webp",
-    href: "/services-section/frontend",
-    github: "https://github.com/ganeshnaidudsa/sketch",
+    img: "/projects/deepfake.png",
+    href: "/projects/deepfake",
   },
   {
-    num: "02",
-    category: "Collabration Tool",
-    title: "Sketch",
+    title: "JPMC Hackathon: Code For Good",
     description:
-      "The Sketch Application is a collaborative drawing platform where multiple users can join a room and draw together in real-time. It is designed to foster creativity and teamwork, allowing users to express their ideas visually.",
+      "Collaborated with a team during J.P. Morgan’s Code for Good hackathon to develop a tech solution for an NGO, building a functional prototype in under 24 hours to address real-world challenges through impactful design and scalable technology.",
     tags: [
-      { name: "Next.js", url: "https://nextjs.org/docs" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
-      { name: "WebSockets", url: "https://www.npmjs.com/package/websocket" },
-      { name: "Turbo Repo", url: "https://turbo.build/" },
-      { name: "Express Js", url: "https://expressjs.com/" },
-      { name: "Postgres", url: "https://www.postgresql.org/" }
+      { name: "Medium", url: "https://medium.com/@sanjanareji06" }
     ],
-    img: "/projects/sketch-canvas.png",
-    href: "#",
-    github: "https://github.com/ganeshnaidudsa/sketch",
-  },
-  {
-    num: "03",
-    category: "Collabration Tool",
-    title: "Sketch",
-    description:
-      "The Sketch Application is a collaborative drawing platform where multiple users can join a room and draw together in real-time. It is designed to foster creativity and teamwork, allowing users to express their ideas visually.",
-    tags: [
-      { name: "Next.js", url: "https://nextjs.org/docs" },
-      { name: "TypeScript", url: "https://www.typescriptlang.org/docs/" },
-      { name: "Tailwind CSS", url: "https://tailwindcss.com/docs" },
-      { name: "WebSockets", url: "https://www.npmjs.com/package/websocket" },
-      { name: "Turbo Repo", url: "https://turbo.build/" },
-      { name: "Express Js", url: "https://expressjs.com/" },
-      { name: "Postgres", url: "https://www.postgresql.org/" }
-    ],
-    img: "/projects/sketch-landing.webp",
-    href: "#",
-    github: "https://github.com/ganeshnaidudsa/sketch",
-  },
+    img: "/projects/cfg.png",
+    href: "/projects/cfg",
+  }
 ];

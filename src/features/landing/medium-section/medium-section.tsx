@@ -3,7 +3,7 @@
 import axios from "axios";
 import { ArrowDownRightIcon } from "lucide-react";
 import { useEffect, useState } from "react";
-import { Section, SectionContent, SectionHeader, SectionHeading, SectionTopline } from "../landing-section";
+import { Section, SectionContent, SectionHeader, SectionTopline } from "../landing-section";
 
 type Article = {
   pubDate: string;
@@ -50,8 +50,7 @@ const MediumArticlesSection = () => {
       className="snap-start min-h-[calc(100vh-5rem)] mx-auto max-w-screen-lg px-4 xl:px-0 "
     >
       <SectionHeader>
-        <SectionTopline variant="secondary">Blog</SectionTopline>
-        <SectionHeading>MEDIUM BLOG</SectionHeading>
+        <SectionTopline variant="secondary" className="text-xl">Blog</SectionTopline>
       </SectionHeader>
       {/* <h2 className="text-3xl font-bold text-center mb-8">
         MEDIUM BLOG
